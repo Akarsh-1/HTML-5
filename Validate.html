@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<script>  
+function validate(){  
+var name=document.f1.name.value;  
+var password=document.f1.password.value;  
+if (name==null || name==""){  
+  alert("Name cannot be empty");  
+  return false;}
+if (password==null || password==""){  
+  alert("Password cannot be empty");  
+  return false;  }
+if(name.length<4||name.length>10){  
+  alert("Name must have a minimum of 4 letters and a maximum of 10 letters.");  
+  return false;  
+  }  
+}  
+</script>  
+<body>  
+<form name="f1" method="post" action="" onsubmit="return validate()" >  
+Name: <input type="text" name="name"><br/>  
+Password: <input type="password" name="password"><br/>  
+<input type="submit" value="register">  
+</form>  
+</html>
